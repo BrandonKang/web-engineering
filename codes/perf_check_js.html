@@ -1,0 +1,25 @@
+<html>
+<head>
+<title>페이지 로딩 시간 구하기</title>
+<script type="text/javascript">
+	function onLoad() {
+		var now = new Date().getTime();
+		document.write ("<img src='https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png'><br>");
+		document.write ("<img src='https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png'><br>");
+		document.write ("<img src='https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png'><br>");
+		
+		var page_load_time = now - performance.timing.navigationStart;
+		console.log("User-perceived page loading time: " + page_load_time);
+	}
+</script>
+</head>
+
+<body>
+이 페이지는 사용자가 인식하는 페이지 로딩 시간을 구하기 위한 문서입니다.<br>
+
+<script>
+	onLoad();
+</script>
+
+</body>
+</html>
